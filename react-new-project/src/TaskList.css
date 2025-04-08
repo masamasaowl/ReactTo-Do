@@ -1,0 +1,10 @@
+.listItem{
+    display: flex;
+    margin-right: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    list-style: none;
+    background-color:#6437d8 ;
+    color: white;
+    animation: spaceGradient 20s ease infinite;
+}

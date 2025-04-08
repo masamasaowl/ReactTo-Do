@@ -1,0 +1,23 @@
+.Taskbar{
+    margin: 1rem 1rem;
+}
+.addBtn{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.theShinyBox{
+    display: flex;
+}
+.myTasks{
+    margin: 3rem 0 1rem 1rem;
+}
+
+.inputTask{
+    border: none;
+    outline: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    width: 100%;
+    padding-left: 8px;
+    font-size: 1.2rem;
+}
