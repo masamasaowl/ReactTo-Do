@@ -5,8 +5,8 @@ export default function Navbar(){
         <>
            <div className="Navbar">
                 <div className="brandName">
-                    <img src="../de7022b37872b74f3f3286acec4cc3c4-removebg-preview.png" alt="" />
-                    <h1 className="title">To-Dum</h1>
+                    <img src="../Untitled_design-removebg-preview.png" alt="" />
+                    <h1 className="title orbitron">To-Dum</h1>
                 </div>
             </div>
         </>

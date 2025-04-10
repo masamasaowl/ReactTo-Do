@@ -9,14 +9,21 @@
   align-items: center;
 }
 .title{
-  font-size: 1.8rem;
-  margin: 0 0.8rem;
+  font-size: 1.6rem;
+  margin: 0 0.5rem;
 }
 .brandName{
-  height: 35px;
+  height: 3.2rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 1rem;
 }
+.brandName img{
+  height: 3rem;
+  width: 3rem;
+}
+
 @keyframes spaceGradient {
     0% {
       background-position: 0% 50%;

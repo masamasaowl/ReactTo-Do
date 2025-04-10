@@ -1,15 +1,33 @@
 .Taskbar{
-    margin: 1rem 1rem;
+    margin: 1rem 2rem;
 }
 .addBtn{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    background: linear-gradient(300deg, #ff3f81,#ff5e5e, hsl(324, 83%, 56%), #c838e2 , #6437d8 );
+    background-size: 600% 600%;
+    animation: spaceGradient 20s ease infinite;
 }
+@keyframes spaceGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+.addBtn i{
+    font-size: 1.5rem;
+} 
 .theShinyBox{
     display: flex;
+    justify-content: space-around;
 }
 .myTasks{
-    margin: 3rem 0 1rem 1rem;
+    margin: 3rem 0 1rem 2rem;
 }
 
 .inputTask{
@@ -20,4 +38,5 @@
     width: 100%;
     padding-left: 8px;
     font-size: 1.2rem;
+
 }

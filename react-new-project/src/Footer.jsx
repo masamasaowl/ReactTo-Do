@@ -6,7 +6,7 @@ export default function Footer(){
     return (
         <>
            <div className="Footer">
-                <p>Created with <FontAwesomeIcon icon={faHeart} /> & kind help of Shraddha ma'am</p>
+                <p className="poppins">Created with <FontAwesomeIcon icon={faHeart} /> & kind help of Shraddha ma'am</p>
             </div>
             
         </>
