@@ -8,7 +8,7 @@
     background-color:#6437d8 ;
     color: white;
 }
-.listItem input{
+.markAsDone{
     height: 1.4rem;
     width: 1.4rem;
 }
@@ -16,11 +16,50 @@
     margin-left: 0.5rem;
     font-size: large;
 }
-.editBtn{
-    padding: 0.5rem 0.7rem;
-    margin-left: 1rem;
-}
 input[type="checkbox"]:checked {
     accent-color: #ff3f81;
+}
+.completed{
+    background-color: #ff3f81;
+    transition: background-color 0.3s ease;
+}
+.completed li{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.editBtn{
+    border: none;
+    padding: 0.5rem 0.7rem;
+    margin-left: 2rem;
+    background-color: transparent;
+    border: 2px solid wheat;
+}
+.editInput{
+    border: none;
+    outline: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    width: 30%;
+    padding-left: 8px;
+    font-size: 1.3rem;
+    background-color: transparent;
+}
+.editing{
+    background: linear-gradient(300deg, #ff3f81,#ff5e5e, hsl(324, 83%, 56%), #c838e2 , #6437d8 );
+    background-size: 600% 600%;
+    animation: spaceGradient 20s ease infinite;
+    transition: background-color 0.5s ease;
+}
+@keyframes spaceGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
 }
   

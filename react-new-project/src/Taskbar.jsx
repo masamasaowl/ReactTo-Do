@@ -15,9 +15,11 @@ export default function Taskbar(){
     let [newTodo, setNewTodo] = useState('');
 
     let addNewTask = () => {
+        // prevent empty tasks
+        if (!newTodo.trim()) return;
         console.log("value was added");
         setTodos((prevTodo) => 
-            [...prevTodo, {task: newTodo, id: uuidv4()}]
+            [...prevTodo, {task: newTodo, id: uuidv4(), isDone: false, isEditing: false}]
         );    
         setNewTodo('')
     }
@@ -33,6 +35,34 @@ export default function Taskbar(){
                 prevTodo.filter(todo => todo.id !== id)
             )  
         },400)  
+    };
+
+    // to check if task was done
+    let toggleComplete = (id) => {
+        setTodos(prevTodo =>
+            prevTodo.map(todo => todo.id === id ? 
+                {...todo, isDone : !todo.isDone} : todo )
+        );
+    }
+
+    // edit task
+    let toggleEditMode = (id) => {
+        setTodos(prevTodo => 
+            prevTodo.map(todo => 
+                todo.id === id ? 
+                { ...todo, isEditing: !todo.isEditing } : todo
+            )
+        )
+    };
+
+    // if the task was edited then edit the array
+    let handleEditChange = (id, newTask) => {
+        setTodos(prevTodo => 
+            prevTodo.map(todo => 
+                todo.id === id ? 
+                {...todo, task: newTask} : todo
+            )
+        )
     };
 
 
@@ -64,7 +94,10 @@ export default function Taskbar(){
         </div>
 
 
-        <TaskList todos= {todos || []} handleDelete = {onDelete}/>
+        <TaskList
+            todos= {todos || []} onDelete = {onDelete} toggleComplete ={toggleComplete} toggleEditMode={toggleEditMode}
+            handleEditChange={handleEditChange}
+        />
 
         </>
     );
