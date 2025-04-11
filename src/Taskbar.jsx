@@ -34,7 +34,7 @@ export default function Taskbar(){
             setTodos(prevTodo => 
                 prevTodo.filter(todo => todo.id !== id)
             )  
-        },400)  
+        },500)  
     };
 
     // to check if task was done
