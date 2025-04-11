@@ -1,7 +1,7 @@
 import "./TaskList.css"
 
 
-export default function TaskList({todos, onDelete}){
+export default function TaskList({todos, handleDelete}){
     
     return (
         <div>
@@ -16,8 +16,10 @@ export default function TaskList({todos, onDelete}){
                         <input 
                         type="checkbox" 
                         // delete from array if id doesn't match
-                        onChange={() => onDelete(todo.id)}
-
+                        onChange={() => {
+                            handleDelete(todo.id);
+                            todo.isDone = true; 
+                        }}
                          />
 
                          {/* the list item */}

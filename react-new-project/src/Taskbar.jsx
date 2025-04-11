@@ -26,10 +26,19 @@ export default function Taskbar(){
         setNewTodo(event.target.value);
     }
 
+    let onDelete = (id) => {
+        
+        setTimeout(() => {
+            setTodos(prevTodo => 
+                prevTodo.filter(todo => todo.id !== id)
+            )  
+        },400)  
+    };
+
 
     return (
         <>
-        <h2 className="myTasks poppins">My Tasks <FontAwesomeIcon icon={faListUl} /></h2>
+        <h2 className="myTasks poppins"> My Tasks <FontAwesomeIcon icon={faListUl} /></h2>
         
         <div className="Taskbar">
             <div className="theShinyBox">
@@ -55,11 +64,7 @@ export default function Taskbar(){
         </div>
 
 
-        <TaskList todos= {todos || []} onDelete = {(id) => {
-            setTodos(prevTodo => 
-                prevTodo.filter(todo => todo.id !== id)
-            )
-        }}/>
+        <TaskList todos= {todos || []} handleDelete = {onDelete}/>
 
         </>
     );
