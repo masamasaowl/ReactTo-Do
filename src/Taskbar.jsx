@@ -28,8 +28,7 @@ export default function Taskbar(){
         setNewTodo(event.target.value);
     }
 
-    let onDelete = (id) => {
-        
+    let onDelete = (id) => {  
         setTimeout(() => {
             setTodos(prevTodo => 
                 prevTodo.filter(todo => todo.id !== id)
@@ -44,6 +43,20 @@ export default function Taskbar(){
                 {...todo, isDone : !todo.isDone} : todo )
         );
     }
+
+    // mark all done at once
+    let markAllAsDone = () => {
+        setTodos(prevTodo => 
+            prevTodo.map(todo => 
+                ({...todo, isDone: true})
+            )
+        )
+        setTimeout(() => {
+            setTodos(prevTodo => 
+                prevTodo.filter(todo => !todo.isDone )
+            )  
+        },500)  
+    };
 
     // edit task
     let toggleEditMode = (id) => {
@@ -90,7 +103,13 @@ export default function Taskbar(){
                     }
                 }}
                  type="text" name="taskbar" placeholder="Add a task" className="inputTask" value={newTodo}/>
+
             </div>
+
+
+            {todos.length > 0 && <button className="markAllAsDone" onClick={markAllAsDone}
+            >Mark all as done</button>}
+            
         </div>
 
 

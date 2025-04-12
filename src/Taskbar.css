@@ -40,3 +40,9 @@
     font-size: 1.2rem;
 
 }
+.markAllAsDone{
+    margin-top: 1rem;
+}
+.markAllAsDone:hover{
+    background-color: #ff3f81;
+}
