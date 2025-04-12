@@ -107,7 +107,7 @@ export default function Taskbar(){
             </div>
 
 
-            {todos.length > 0 && <button className="markAllAsDone" onClick={markAllAsDone}
+            {todos.length > 1 && <button className="markAllAsDone" onClick={markAllAsDone}
             >Mark all as done</button>}
             
         </div>
