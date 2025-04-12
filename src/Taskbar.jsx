@@ -1,4 +1,4 @@
-import "./taskbar.css"
+import "./Taskbar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faListUl } from "@fortawesome/free-solid-svg-icons";
 import TaskList from "./TaskList";
